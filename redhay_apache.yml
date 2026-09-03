@@ -1,0 +1,23 @@
+---
+- name: install apache and php on red hat
+  hosts: redhat
+  become: true
+
+  tasks:
+
+    - name: update package repository
+      dnf:
+        update_cache: yes
+
+    - name: install apache and PHP
+      dnf:
+        name:
+          - httpd
+          - php
+        state: latest
+
+    - name: start and enabling of apache
+      service:
+        name: httpd
+        state: started
+        enabled: yes

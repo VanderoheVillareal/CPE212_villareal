@@ -1,6 +1,10 @@
-[servers]
-node1 ansible_host=192.168.56.109
-node2 ansible_host=192.168.56.108
+[web_servers]
+192.168.56.108
+192.168.56.109
+192.168.56.110
 
-[servers:vars]
-ansible_user=villareal
+[db_servers]
+192.168.56.110
+
+[file_servers]
+192.168.56.110

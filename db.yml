@@ -1,0 +1,6 @@
+---
+- name: configure databse servers
+  hosts: db_servers
+  become: true
+  roles:
+    - database

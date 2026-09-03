@@ -1,0 +1,17 @@
+---
+- name: configure web servers
+  hosts: web_servers
+  become: true
+  roles:
+    - role: webserver
+      tags:
+        - web
+
+- name: configure databse servers
+  hosts: db_servers
+  become: true
+  roles:
+    - role: database
+      tags:
+        - db
+
